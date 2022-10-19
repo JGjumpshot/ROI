@@ -27,6 +27,7 @@ body {
     animation-name: appear;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+    text-shadow: 5px 5px black;
 }
 
 @keyframes appear {
