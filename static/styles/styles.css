@@ -9,7 +9,7 @@ body {
 }
 
 #landing-page-image {
-    margin: 200px 10px 0px 60px;
+    transform: translate(25%, 24%);
     position: absolute;
 }
 
@@ -28,6 +28,19 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     text-shadow: 5px 5px black;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 35px;
+}
+
+.blurb {
+    transform: translateX(-50%) translateY(96%);
+    width: 35rem;
+    color: #f8f9fa;
 }
 
 @keyframes appear {
