@@ -37,12 +37,21 @@ body {
 }
 
 .blurb {
-    transform: translateX(-50%) translateY(96%);
+    transform: translateX(-50%) translateY(60%);
     width: 35rem;
     color: #f8f9fa;
     font-family: 'Lato';
     /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    float: right;
+    width: 270px;
+    position: relative;
+    transform: translateX(-166%) translateY(220px);
 }
 
 @keyframes appear {
