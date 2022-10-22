@@ -54,6 +54,17 @@ body {
     transform: translateX(-166%) translateY(220px);
 }
 
+.form-signup {
+    width: 40em;
+    background: rgba(179, 178, 178, 0.555);
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.signup-container {
+    opacity: 1;
+}
 @keyframes appear {
     0% {
         opacity: 0;

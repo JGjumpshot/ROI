@@ -1,3 +1,4 @@
+from turtle import title
 from flask import Flask, render_template, request
 import smtplib
 from dotenv import load_dotenv
@@ -11,4 +12,10 @@ PASSWORD = os.getenv('PASSWORD')
 @app.route('/')
 def home():
     title = "Welcome"
-    return render_template("index.html", title=title)
+    return render_template("home.html", title=title)
+
+@app.route('/support')
+def support():
+    # print(request.args)
+    title="Get Started"
+    return render_template("support.html", title=title)
