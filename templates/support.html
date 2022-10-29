@@ -1,52 +1,125 @@
 {% extends 'base.html' %}
 {% block content %}
 <form class="form-signup">
-    <div>How can we assist you?</div>
-    <div class="signup-container">
-      <!-- <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Chat
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Email
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Phone
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Other
-        </label>
-      </div> -->
-      <label class="container">One
-        <input type="checkbox" checked="checked">
-        <span class="checkmark"></span>
-      </label>
-      
-      <label class="container">Two
+    <h2>How can we assist you?</h2>
+    <div class="tab">
+      <label class="container">Chat
         <input type="checkbox">
         <span class="checkmark"></span>
       </label>
       
-      <label class="container">Three
+      <label class="container">Email
         <input type="checkbox">
         <span class="checkmark"></span>
       </label>
       
-      <label class="container">Four
+      <label class="container">Phone
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">Other
         <input type="checkbox">
         <span class="checkmark"></span>
       </label>
     </div>
+    <div class="tab">
+      <h2>What languages are you hoping to support?</h2>
+      <div class="language-container">
+        <div class="column">
+          <label class="container">English
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">French
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Spanish
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Portuguese
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Polish
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Turkish
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Czech
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="column">
+          <label class="container">Dutch
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Norwegian
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Swedish
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Finnish
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">German
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Danish
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">French Canadian
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="column">
+          <label class="container">Russian
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Arabic
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Hindi
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Romanian
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Hungarian
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Mandarin
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Greek Italian
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      
+    </div>
+    
   </form>
 
 {% endblock %}

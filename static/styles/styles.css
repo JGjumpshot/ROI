@@ -63,10 +63,21 @@ body {
     border-radius: 10px;
 }
 
-.signup-container {
+.tab {
     opacity: 1;
 }
 
+.language-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 30px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
 .container {
     display: block;
     position: relative;
@@ -78,6 +89,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-size: 20px;
 }
 
 /* Hide the browser's default checkbox */
@@ -91,10 +103,10 @@ body {
 
 .checkmark {
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     background-color: #eee;
 }
 
