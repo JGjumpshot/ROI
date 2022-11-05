@@ -2,9 +2,10 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     background: linear-gradient(225.34deg, #00E0FF 9.53%, #B600BA 86.96%);
     background-repeat: no-repeat;
+    overflow-x: hidden;
     font-family: 'Lato', sans-serif;
 }
 
@@ -72,12 +73,14 @@ body {
     flex-wrap: wrap;
     flex: 1 30px;
 }
+
 .column {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
 }
+
 .container {
     display: block;
     position: relative;
@@ -138,6 +141,34 @@ body {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+/* progress css */
+input.invalid {
+    background-color: #ffdddd;
+}
+
+.tab {
+    display: none;
+}
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step.finish {
+    background-color: #04AA6D;
 }
 
 @keyframes appear {
