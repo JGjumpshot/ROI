@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<form class="form-signup">
+<form action="/submit" id="regForm" class="form-signup" method="post">
   <h2>How can we assist you?</h2>
   <div class="tab">
     <label class="container">Chat
@@ -161,7 +161,12 @@
       </label>
     </div>
   </div>
-
+  <div id="contact-info" class="tab">
+    <label for="email">Email:</label>
+    <input type="email" name="email">
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone">
+  </div>
   <div style="overflow:auto;">
     <div style="float:right;">
       <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>

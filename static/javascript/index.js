@@ -12,7 +12,13 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
+    let contactInfo = document.getElementById('contact-info');
     document.getElementById("nextBtn").innerHTML = "Submit";
+    contactInfo.style.display = "flex";
+    contactInfo.style.flexDirection = "column"
+    contactInfo.style.width = "50%";
+    contactInfo.style.margin = "0 90px";
+    
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
