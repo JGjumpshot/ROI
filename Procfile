@@ -1,1 +1,0 @@
-web: waitress-serve --listen "*:8080" wsgi:app
