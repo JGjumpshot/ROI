@@ -1,4 +1,3 @@
-from turtle import title
 from flask import Flask, render_template, request
 import smtplib
 from dotenv import load_dotenv
@@ -16,6 +15,12 @@ def home():
 
 @app.route('/support')
 def support():
-    # print(request.args)
     title="Get Started"
     return render_template("support.html", title=title)
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    title="Submit"
+    print(request.data)
+
+    return render_template('submit.html', title=title)
