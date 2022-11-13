@@ -26,6 +26,11 @@ def support():
 @app.route('/submit', methods=['POST'])
 def submit():
     title="Submit"
-    print(request.data)
+    contact_needs = request.form.getlist('contact_checkbox')
+    language1_needs = request.form.getlist('lang1_checkbox')
+    language2_needs = request.form.getlist('lang2_checkbox')
+    language3_needs = request.form.getlist('lang3_checkbox')
+
+    print([contact_needs, language1_needs, language2_needs, language3_needs])
 
     return render_template('submit.html', title=title)

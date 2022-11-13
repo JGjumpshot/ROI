@@ -6,7 +6,7 @@
   <div class="tab">
     {% for item in range(0, len) %} 
       <label class="container">{{contact_types[item]}}
-        <input type="checkbox">
+        <input type="checkbox" name="contact_checkbox" value="{{contact_types[item]}}">
         <span class="checkmark"></span>
       </label>
     {% endfor %}
@@ -17,7 +17,7 @@
       <div class="column">
         {% for language in range(0, lenl1)%}
         <label class="container">{{languages_tab_1[language]}}
-          <input type="checkbox">
+          <input type="checkbox" name="lang1_checkbox" value="{{languages_tab_1[language]}}">
           <span class="checkmark"></span>
         </label>
         {% endfor %}
@@ -25,7 +25,7 @@
       <div class="column">
         {% for language in range(0, lenl2)%}
         <label class="container">{{languages_tab_2[language]}}
-          <input type="checkbox">
+          <input type="checkbox" name="lang2_checkbox" value="{{languages_tab_2[language]}}">
           <span class="checkmark"></span>
         </label>
         {% endfor %}
@@ -33,7 +33,7 @@
       <div class="column">
         {% for language in range(0, lenl3)%}
         <label class="container">{{languages_tab_3[language]}}
-          <input type="checkbox">
+          <input type="checkbox" name="lang3_checkbox" value="{{languages_tab_3[language]}}">
           <span class="checkmark"></span>
         </label>
         {% endfor %}
@@ -45,7 +45,7 @@
     <div class="column">
       {% for industry in range(0, leni)%}
       <label class="container">{{industries[industry]}}
-        <input type="checkbox">
+        <input type="checkbox" name="industry_checkbox" value="{{industries[industry]}}">
         <span class="checkmark"></span>
       </label>
       {% endfor %}
