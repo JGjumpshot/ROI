@@ -2,163 +2,53 @@
 {% block content %}
 <form action="/submit" id="regForm" class="form-signup" method="post">
   <h2>How can we assist you?</h2>
+  <!-- Contact Types tab -->
   <div class="tab">
-    <label class="container">Chat
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
-
-    <label class="container">Email
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
-
-    <label class="container">Phone
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
-
-    <label class="container">Other
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
+    {% for item in range(0, len) %} 
+      <label class="container">{{contact_types[item]}}
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+    {% endfor %}
   </div>
   <div class="tab">
     <h2>What languages are you hoping to support?</h2>
     <div class="language-container">
       <div class="column">
-        <label class="container">English
+        {% for language in range(0, lenl1)%}
+        <label class="container">{{languages_tab_1[language]}}
           <input type="checkbox">
           <span class="checkmark"></span>
         </label>
-        <label class="container">French
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Spanish
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Portuguese
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Polish
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Turkish
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Czech
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
+        {% endfor %}
       </div>
       <div class="column">
-        <label class="container">Dutch
+        {% for language in range(0, lenl2)%}
+        <label class="container">{{languages_tab_2[language]}}
           <input type="checkbox">
           <span class="checkmark"></span>
         </label>
-        <label class="container">Norwegian
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Swedish
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Finnish
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">German
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Danish
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">French Canadian
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
+        {% endfor %}
       </div>
       <div class="column">
-        <label class="container">Russian
+        {% for language in range(0, lenl3)%}
+        <label class="container">{{languages_tab_3[language]}}
           <input type="checkbox">
           <span class="checkmark"></span>
         </label>
-        <label class="container">Arabic
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Hindi
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Romanian
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Hungarian
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Mandarin
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Greek Italian
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
+        {% endfor %}
       </div>
     </div>
   </div>
   <div class="tab">
     <h2>What industries are you looking to support?</h2>
     <div class="column">
-      <label class="container">Technology
+      {% for industry in range(0, leni)%}
+      <label class="container">{{industries[industry]}}
         <input type="checkbox">
         <span class="checkmark"></span>
       </label>
-      <label class="container">Healthcare
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Retail / Ecommerce
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Financial Education
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Education
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-    </div>
-    <div class="column">
-      <label class="container">Business
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Real Estate
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Automotive
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Government
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
+      {% endfor %}
     </div>
   </div>
   <div id="contact-info" class="tab">
