@@ -21,7 +21,9 @@ def home():
 @app.route('/support')
 def support():
     title="Get Started"
-    return render_template("support.html", title=title, len = len(contact_types), contact_types=contact_types, lenl1=len(languages_tab_1), languages_tab_1=languages_tab_1, lenl2=len(languages_tab_2), languages_tab_2=languages_tab_2, lenl3= len(languages_tab_3), languages_tab_3=languages_tab_3, leni=len(industries), industries=industries)
+    email = ''
+    phone = ''
+    return render_template("support.html", title=title, len = len(contact_types), contact_types=contact_types, lenl1=len(languages_tab_1), languages_tab_1=languages_tab_1, lenl2=len(languages_tab_2), languages_tab_2=languages_tab_2, lenl3= len(languages_tab_3), languages_tab_3=languages_tab_3, leni=len(industries), industries=industries, email=email, phone=phone)
 
 @app.route('/submit', methods=['POST'])
 def submit():
@@ -31,6 +33,10 @@ def submit():
     language2_needs = request.form.getlist('lang2_checkbox')
     language3_needs = request.form.getlist('lang3_checkbox')
 
-    print([contact_needs, language1_needs, language2_needs, language3_needs])
+    email = request.form.get('email')
+    phone = request.form.get('phone')
+
+
+    print([contact_needs, language1_needs, language2_needs, language3_needs, email, phone])
 
     return render_template('submit.html', title=title)
