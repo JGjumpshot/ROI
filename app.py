@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import smtplib
 from dotenv import load_dotenv
 import os
+import json
 load_dotenv()
 app = Flask(__name__)
 
@@ -36,7 +37,7 @@ def submit():
     email = request.form.get('email')
     phone = request.form.get('phone')
 
-
-    print([contact_needs, language1_needs, language2_needs, language3_needs, email, phone])
+    print(json.dumps([contact_needs, language1_needs, language2_needs, language3_needs, email, phone]))
+    # print([contact_needs, language1_needs, language2_needs, language3_needs, email, phone])
 
     return render_template('submit.html', title=title)
