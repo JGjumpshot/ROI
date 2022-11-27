@@ -2,6 +2,9 @@ from flask import Flask, render_template, request
 import smtplib
 from dotenv import load_dotenv
 import os
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
 load_dotenv()
 app = Flask(__name__)
 
@@ -32,14 +35,35 @@ def submit():
     language1_needs = request.form.getlist('lang1_checkbox')
     language2_needs = request.form.getlist('lang2_checkbox')
     language3_needs = request.form.getlist('lang3_checkbox')
-    message = "Thank you! We plan on contacting you soon!"
     email = request.form.get('email')
     phone = request.form.get('phone')
+    sender_email = "connection-solutions@gmail.com"
+    receiver_email = email
+    message = MIMEMultipart("alternative")
+    message["Subject"] = "We'll contact you soon"
+    message["From"] = sender_email
+    message["To"] = receiver_email
+    html = """
+    <html>
+    <head></head>
+    <body>
+        <p>Hi!<br>
+        How are you?<br>
+        Here is the <a href="http://www.python.org">link</a> you wanted.
+        </p>
+    </body>
+    </html>
+"""
 
+    mimeObj = MIMEText(html, "html")
+
+    message.attach(mimeObj)
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
     server.login(EMAIL, PASSWORD)
-    server.sendmail(EMAIL, email, message)
+    server.sendmail(EMAIL, email, message.as_string())
+
+
     print([contact_needs, language1_needs, language2_needs, language3_needs, email, phone])
 
     return render_template('submit.html', title=title)
