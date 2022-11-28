@@ -33,11 +33,14 @@ def submit():
     language1_needs = request.form.getlist('lang1_checkbox')
     language2_needs = request.form.getlist('lang2_checkbox')
     language3_needs = request.form.getlist('lang3_checkbox')
-
+    message = "Thank you! We plan on contacting you soon!"
     email = request.form.get('email')
     phone = request.form.get('phone')
 
-    print(json.dumps([contact_needs, language1_needs, language2_needs, language3_needs, email, phone]))
-    # print([contact_needs, language1_needs, language2_needs, language3_needs, email, phone])
+    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server.starttls()
+    server.login(EMAIL, PASSWORD)
+    server.sendmail(EMAIL, email, message)
+    print([contact_needs, language1_needs, language2_needs, language3_needs, email, phone])
 
     return render_template('submit.html', title=title)
