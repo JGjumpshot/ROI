@@ -167,6 +167,11 @@ input.invalid {
     opacity: 0.5;
 }
 
+.step-count {
+    text-align:center;
+    margin-top:40px;
+}
+
 .step.active {
     opacity: 1;
 }
@@ -219,6 +224,21 @@ input.invalid {
         float: right;
         width: 270px;
         transform: translateX(-20%) translateY(27em);
+    }
+
+    .form-signup {
+        width: 90vw;
+        /* height: 129vh; */
+    }
+
+    .button-wrapper {
+        float: right;
+        transform: translate(200px, -41px);
+        position: absolute;
+    }
+
+    .step-count {
+        margin-top: 0px;
     }
 }
 
