@@ -190,3 +190,46 @@ input.invalid {
         bottom: 0;
     }
 }
+
+@media only screen /*iPhone*/
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .banner-text {
+        font-size: 245%;
+        text-align: center;
+    }
+
+    #landing-page-image {
+        width: 40%;
+        transform: translate(70%, 40px);
+    }
+
+    .blurb {
+        position: absolute;
+        font-size: 20px;
+        width: 84vw;
+        text-align: center;
+        transform: translate(-12%, 335px);
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: space-around;
+        float: right;
+        width: 270px;
+        transform: translateX(-20%) translateY(27em);
+    }
+}
+
+@media screen /*laptop*/
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+}
+
+@media only screen /*iPad*/
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+}
