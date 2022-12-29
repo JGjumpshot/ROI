@@ -15,13 +15,6 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
 
-  if (n == 1) {
-    let body = document.getElementsByTagName('body')[0];
-    let regForm = document.getElementById('regForm');
-    body.style.height = "135vh";
-    regForm.style.height = "135vh";
-  }
-
   if (n == (x.length - 1)) {
     let contactInfo = document.getElementById('contact-info');
     document.getElementById("nextBtn").innerHTML = "Submit";
