@@ -167,6 +167,11 @@ input.invalid {
     opacity: 0.5;
 }
 
+.step-count {
+    text-align:center;
+    margin-top:40px;
+}
+
 .step.active {
     opacity: 1;
 }
