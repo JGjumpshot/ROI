@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <form action="/submit" id="regForm" class="form-signup" method="post">
-  <h2>How can we assist you?</h2>
   <!-- Contact Types tab -->
   <div class="tab">
+    <h2>How can we assist you?</h2>
     {% for item in range(0, len) %} 
-      <label class="container">{{contact_types[item]}}
+      <label class="tab_container">{{contact_types[item]}}
         <input type="checkbox" name="contact_checkbox" value="{{contact_types[item]}}">
         <span class="checkmark"></span>
       </label>
@@ -16,7 +16,7 @@
     <div class="language-container">
       <div class="column">
         {% for language in range(0, lenl1)%}
-        <label class="container">{{languages_tab_1[language]}}
+        <label class="tab_container">{{languages_tab_1[language]}}
           <input type="checkbox" name="lang1_checkbox" value="{{languages_tab_1[language]}}">
           <span class="checkmark"></span>
         </label>
@@ -24,7 +24,7 @@
       </div>
       <div class="column">
         {% for language in range(0, lenl2)%}
-        <label class="container">{{languages_tab_2[language]}}
+        <label class="tab_container">{{languages_tab_2[language]}}
           <input type="checkbox" name="lang2_checkbox" value="{{languages_tab_2[language]}}">
           <span class="checkmark"></span>
         </label>
@@ -32,7 +32,7 @@
       </div>
       <div class="column">
         {% for language in range(0, lenl3)%}
-        <label class="container">{{languages_tab_3[language]}}
+        <label class="tab_container">{{languages_tab_3[language]}}
           <input type="checkbox" name="lang3_checkbox" value="{{languages_tab_3[language]}}">
           <span class="checkmark"></span>
         </label>
@@ -44,7 +44,7 @@
     <h2>What industries are you looking to support?</h2>
     <div class="column">
       {% for industry in range(0, leni)%}
-      <label class="container">{{industries[industry]}}
+      <label class="tab_container">{{industries[industry]}}
         <input type="checkbox" name="industry_checkbox" value="{{industries[industry]}}">
         <span class="checkmark"></span>
       </label>

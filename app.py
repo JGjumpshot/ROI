@@ -8,9 +8,9 @@ app = Flask(__name__)
 EMAIL = os.getenv('EMAIL')
 PASSWORD = os.getenv('PASSWORD')
 contact_types = ['Chat', 'Email', 'Phone', 'Other']
-languages_tab_1 = ['English','French', 'Spanish', 'Portuguese', 'Polish', 'Turkish', 'Czech']
-languages_tab_2 = ['Dutch', 'Norwegian', 'Swedish', 'Finnish', 'German', 'Danish', 'French Canadian']
-languages_tab_3 = ['Russian', 'Arabic', 'Hindi', 'Romanian', 'Hungarian', 'Mandarin', 'Greek Italian']
+languages_tab_1 = ['English','French', 'Spanish', 'Portuguese', 'Polish', 'Turkish', 'Czech'] #polish, turkish, czech
+languages_tab_2 = ['Dutch', 'Norwegian', 'Swedish', 'Finnish', 'German', 'Danish', 'French Canadian'] #norwegian, finnish, Danish
+languages_tab_3 = ['Russian', 'Arabic', 'Hindi', 'Romanian', 'Hungarian', 'Mandarin', 'Greek Italian'] #arabic, hindi, greek italian
 industries = ['Technology', 'Healthcare', 'Retail / E-commerce', 'Financial Education', 'Education', 'Business', 'Real Estate', 'Automotive', 'Government']
 
 @app.route('/')
