@@ -5,7 +5,7 @@ import os
 import json
 load_dotenv()
 app = Flask(__name__)
-
+### py -m flask --debug run to run in debug mode
 EMAIL = os.getenv('EMAIL')
 PASSWORD = os.getenv('PASSWORD')
 contact_types = ['Chat', 'Email', 'Phone', 'Other']
@@ -18,6 +18,11 @@ industries = ['Technology', 'Healthcare', 'Retail / E-commerce', 'Financial Educ
 def home():
     title = "Welcome"
     return render_template("home.html", title=title)
+
+@app.route('/about')
+def about():
+    title = "About"
+    return render_template("about.html", title=title)
 
 @app.route('/support')
 def support():
