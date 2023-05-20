@@ -49,3 +49,8 @@ def submit():
     print([contact_needs, language1_needs, language2_needs, language3_needs, email, phone])
 
     return render_template('submit.html', title=title)
+
+@app.route('/contact')
+def contact():
+    title="Contact"
+    return render_template("contact.html", title=title)
